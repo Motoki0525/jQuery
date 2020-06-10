@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+     <head>
+         <meta charset="utf-8">
+         <title>サンプル</title>
+         <script src="../../js/jquery-3.2.1.min.js"></script>
+         <style>
+            dl{
+                width:300px;
+                margin:50px auto;
+            }
+            dl dt{
+                background:#7CADB6;
+                cursor:pointer;
+            }
+            dl dd{
+                border:1px solid #7CADB6;
+                height:300px;
+                margin:0;
+            }
+        </style>
+         <script>
+             $(function(){
+             $("dt").click(function(){
+                 if($("dd").css("display")=="block"){
+                     $("dd:not(:animated)").slideUp("slow");
+                 }else{
+                     $("dd").slideDown("fast");
+                 }
+            });
+        });
+            </script>
+     </head>
+     <body>
+         <dl>
+             <dt>スライドして表示状態を切り替える</dt>
+             <dd>
+                 slideDown()とslideUp(),show()やhideとは違い
+                 スライドアニメーションで表示非表示を切り替える命令です。
+             </dd>
+         </dl>
+     </body>
+</html>
